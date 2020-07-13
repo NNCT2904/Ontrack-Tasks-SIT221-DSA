@@ -1,0 +1,12 @@
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/bin/Debug/netcoreapp3.1/Vector.deps.json
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/bin/Debug/netcoreapp3.1/Vector.runtimeconfig.json
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/bin/Debug/netcoreapp3.1/Vector.runtimeconfig.dev.json
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/bin/Debug/netcoreapp3.1/Vector.dll
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/bin/Debug/netcoreapp3.1/Vector.pdb
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.csproj.CoreCompileInputs.cache
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.AssemblyInfoInputs.cache
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.AssemblyInfo.cs
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.dll
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.pdb
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.genruntimeconfig.cache
+/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/Debug/netcoreapp3.1/Vector.csprojAssemblyReference.cache

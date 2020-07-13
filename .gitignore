@@ -1,0 +1,5 @@
+*.json
+*.xml
+*.dll
+*.pdb
+Task1.1/Vector/obj

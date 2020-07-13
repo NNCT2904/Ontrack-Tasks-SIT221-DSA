@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/Vector.csproj": {}
+  },
+  "projects": {
+    "/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/Vector.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/Vector.csproj",
+        "projectName": "Vector",
+        "projectPath": "/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/Vector.csproj",
+        "packagesPath": "/Users/thanhnguyen/.nuget/packages/",
+        "outputPath": "/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/thanhnguyen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

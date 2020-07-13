@@ -82,38 +82,95 @@ namespace Vector
         // Read the instruction carefully, study the code examples from above as they should help you to write the rest of the code.
         public void Insert(int index, T element)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (Count == Capacity)
+            {
+                ExtendData(DEFAULT_CAPACITY);
+            }
+            if(index == Count)
+            {
+                Add(element);
+            }
+            else if (index >= 0 && index <=Count)
+            {
+                for (var i = Count; i >= index; i--)
+                {
+                    data[i+1] = data[i];
+                }
+                data[index] = element;
+                Count += 1;
+            }
+            else if (index > Count)
+            {
+                throw new IndexOutOfRangeException();
+            }
         }
 
         public void Clear()
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            foreach (var item in data)
+            {
+                Remove(item);
+                Count = 0;            }
         }
 
         public bool Contains(T element)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            for (var i = 0; i < Count; i++)
+            {
+                if (data[i].Equals(element))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool Remove(T element)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (Contains(element))
+            {
+                RemoveAt(IndexOf(element));
+                return true;
+            }
+            return false;
         }
 
         public void RemoveAt(int index)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            for (int i = index; i < Count; i++)
+            {
+                
+                {
+                    data[i] = data[i + 1];
+                }
+                
+            }
+            Count -= 1;
         }
        
         public override string ToString()
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            string result = $"{data[0]}";
+            for (int i = 1; i < Count; i++)
+            {
+                result = string.Format($"{result}, {data[i]}");
+            }
+            //foreach (var item in data)
+            //{
+            //    result = string.Format($"{result}, {item}");
+            //}
+            return string.Format($"[{result}]");
+            
+        }
+
+        public string Print()
+        {
+            string result = "";
+            foreach (var item in data)
+            {
+                result = string.Format($"{result}, {item}");
+            }
+            return result;
         }
 
     }

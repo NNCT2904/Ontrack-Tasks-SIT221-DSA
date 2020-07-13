@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{128F2A10-DC34-4288-8AF1-2DD39DF16C4F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Vector/Tester.cs">
+    <Files>
+      <File FileName="Vector/Tester.cs" Line="59" Column="1" />
+      <File FileName="Vector/Vector.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Task1.1" expanded="True">
+            <Node name="Vector" expanded="True">
+              <Node name="Tester.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Vector PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/thanhnguyen/Documents/Coding stuff/Ontrack-Tasks-SIT221-DSA/Task1.1/Vector/Tester.cs" relfile="Vector/Tester.cs" line="59" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

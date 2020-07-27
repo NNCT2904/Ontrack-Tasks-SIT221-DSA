@@ -1,17 +1,20 @@
 ﻿<Properties StartupConfiguration="{16C70885-65A4-4514-ACF6-885BF1FE060A}|Default">
   <MonoDevelop.Ide.ItemProperties.Sorter PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Sorter/Vector.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sorter/InsertionSort.cs">
     <Files>
       <File FileName="Sorter/ISorter.cs" Line="1" Column="1" />
-      <File FileName="Sorter/Tester.cs" Line="1" Column="1" />
-      <File FileName="Sorter/Vector.cs" Line="1" Column="1" />
+      <File FileName="Sorter/Tester.cs" Line="256" Column="48" />
+      <File FileName="Sorter/Vector.cs" Line="190" Column="14" />
+      <File FileName="Sorter/BubbleSort.cs" Line="14" Column="10" />
+      <File FileName="Sorter/SelectionSort.cs" Line="28" Column="41" />
+      <File FileName="Sorter/InsertionSort.cs" Line="4" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Task3.1" expanded="True">
             <Node name="Sorter" expanded="True">
-              <Node name="Vector.cs" selected="True" />
+              <Node name="InsertionSort.cs" selected="True" />
             </Node>
           </Node>
         </State>

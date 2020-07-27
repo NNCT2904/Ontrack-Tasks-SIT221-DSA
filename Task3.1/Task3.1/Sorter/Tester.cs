@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sorter;
 
 namespace Vector
 {
@@ -126,193 +127,193 @@ namespace Vector
 
             // ------------------ BubbleSort ----------------------------------
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest D: Sort integer numbers applying BubbleSort with AscendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new BubbleSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new AscendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "D";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest D: Sort integer numbers applying BubbleSort with AscendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new BubbleSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new AscendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "D";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest E: Sort integer numbers applying BubbleSort with DescendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new BubbleSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new DescendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "E";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest E: Sort integer numbers applying BubbleSort with DescendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new BubbleSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new DescendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "E";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest F: Sort integer numbers applying BubbleSort with EvenNumberFirstComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new BubbleSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new EvenNumberFirstComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "F";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest F: Sort integer numbers applying BubbleSort with EvenNumberFirstComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new BubbleSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new EvenNumberFirstComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "F";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
 
 
             // ------------------ SelectionSort ----------------------------------
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest G: Sort integer numbers applying SelectionSort with AscendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new SelectionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new AscendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "G";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest G: Sort integer numbers applying SelectionSort with AscendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new SelectionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new AscendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "G";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest H: Sort integer numbers applying SelectionSort with DescendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new SelectionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new DescendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "H";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest H: Sort integer numbers applying SelectionSort with DescendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new SelectionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new DescendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "H";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest I: Sort integer numbers applying SelectionSort with EvenNumberFirstComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new SelectionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new EvenNumberFirstComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "I";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest I: Sort integer numbers applying SelectionSort with EvenNumberFirstComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new SelectionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new EvenNumberFirstComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "I";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
 
 
             // ------------------ InsertionSort ----------------------------------
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest J: Sort integer numbers applying InsertionSort with AscendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new InsertionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new AscendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "J";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest J: Sort integer numbers applying InsertionSort with AscendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new InsertionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new AscendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckAscending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "J";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest K: Sort integer numbers applying InsertionSort with DescendingIntComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new InsertionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new DescendingIntComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "K";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest K: Sort integer numbers applying InsertionSort with DescendingIntComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new InsertionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new DescendingIntComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckDescending(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "K";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
-            //try
-            //{
-            //    Console.WriteLine("\nTest L: Sort integer numbers applying InsertionSort with EvenNumberFirstComparer: ");
-            //    vector = new Vector<int>(problem_size);
-            //    vector.Sorter = new InsertionSort();
-            //    for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
-            //    Console.WriteLine("Intital data: " + vector.ToString());
-            //    vector.Sort(new EvenNumberFirstComparer());
-            //    Console.WriteLine("Resulting order: " + vector.ToString());
-            //    if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
-            //    Console.WriteLine(" :: SUCCESS");
-            //    result = result + "L";
-            //}
-            //catch (Exception exception)
-            //{
-            //    Console.WriteLine(" :: FAIL");
-            //    Console.WriteLine(exception.ToString());
-            //    result = result + "-";
-            //}
+            try
+            {
+                Console.WriteLine("\nTest L: Sort integer numbers applying InsertionSort with EvenNumberFirstComparer: ");
+                vector = new Vector<int>(problem_size);
+                vector.Sorter = new InsertionSort();
+                for (int i = 0; i < problem_size; i++) vector.Add(data[i]);
+                Console.WriteLine("Intital data: " + vector.ToString());
+                vector.Sort(new EvenNumberFirstComparer());
+                Console.WriteLine("Resulting order: " + vector.ToString());
+                if (!CheckEvenNumberFirst(vector)) throw new Exception("Sorted vector has an incorrect sequence of integers");
+                Console.WriteLine(" :: SUCCESS");
+                result = result + "L";
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(" :: FAIL");
+                Console.WriteLine(exception.ToString());
+                result = result + "-";
+            }
 
             Console.WriteLine("\n\n ------------------- SUMMARY ------------------- ");
             Console.WriteLine("Tests passed: " + result);

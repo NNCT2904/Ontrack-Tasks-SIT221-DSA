@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{16C70885-65A4-4514-ACF6-885BF1FE060A}|Default">
+  <MonoDevelop.Ide.ItemProperties.Sorter PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sorter/Vector.cs">
+    <Files>
+      <File FileName="Sorter/ISorter.cs" Line="1" Column="1" />
+      <File FileName="Sorter/Tester.cs" Line="1" Column="1" />
+      <File FileName="Sorter/Vector.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Task3.1" expanded="True">
+            <Node name="Sorter" expanded="True">
+              <Node name="Vector.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

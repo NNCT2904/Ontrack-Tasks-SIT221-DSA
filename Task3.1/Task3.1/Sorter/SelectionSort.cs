@@ -29,7 +29,7 @@ namespace Sorter
                     }
                 }
 
-                if (minLocation != 1)
+                if (minLocation != i)
                 {
                     K temp = sequence[minLocation];
                     sequence[minLocation] = sequence[i];

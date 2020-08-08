@@ -18,7 +18,7 @@ namespace Task3._2
 
             MergeSort<K>(sequence, comparer);
         }
-
+        //Merge S1 and S2 to S
         private void Merge<K>(K[] s1, K[] s2, K[] s, IComparer<K> comparer) where K : IComparable<K>
         {
             int i = 0, j = 0;
@@ -34,6 +34,7 @@ namespace Task3._2
         private void MergeSort<K>(K[] sequence, IComparer<K> comparer) where K : IComparable<K>
         {
             int n = sequence.Length;
+            //when array length is 1, it is sorted
             if (n < 2) return;
 
             //chop chop
@@ -41,24 +42,12 @@ namespace Task3._2
             K[] s1 = sequence.Take(mid).ToArray();
             K[] s2 = sequence.Skip(mid).ToArray();
 
-            //conquer
+            //conquer, sort the 2 sequences recursively
             MergeSort(s1, comparer);
             MergeSort(s2, comparer);
 
+            //Merge result to original
             Merge(s1, s2, sequence, comparer);
-        }
-
-        private K[] copyOfRange<K>(K[] sequence, int start, int end)
-        {
-            int len = end - start;
-            K[] result = new K[len];
-
-            for (int i=0; i< len; i++)
-            {
-                result[i] = sequence[start + 1];
-            }
-
-            return result;
         }
     }
 }

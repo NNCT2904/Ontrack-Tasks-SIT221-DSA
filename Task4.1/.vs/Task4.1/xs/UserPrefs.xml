@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{4D8CB8CD-2BB6-4F22-A277-3FC46826CE54}|Default">
+  <MonoDevelop.Ide.ItemProperties.IterationAndSearch PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="IterationAndSearch/Vector.cs">
+    <Files>
+      <File FileName="IterationAndSearch/ISorter.cs" Line="7" Column="29" />
+      <File FileName="IterationAndSearch/Vector.cs" Line="288" Column="32" />
+      <File FileName="IterationAndSearch/Tester.cs" Line="305" Column="47" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Task4.1" expanded="True">
+            <Node name="IterationAndSearch" expanded="True">
+              <Node name="Vector.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>vector.GetEnumerator().Current</Value>
+          <Value>default(int)</Value>
+          <Value>_objects[0]</Value>
+          <Value>Current</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

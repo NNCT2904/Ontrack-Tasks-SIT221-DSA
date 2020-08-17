@@ -236,7 +236,7 @@ namespace IterationAndSearch
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new ListEnumerator(this);
+            return new IteratorClass(this);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -244,12 +244,12 @@ namespace IterationAndSearch
             return this.GetEnumerator();
         }
 
-        private class ListEnumerator : IEnumerator<T>
+        private class IteratorClass : IEnumerator<T>
         {
             private Vector<T> _vector;
             private int _currentIndex;
 
-            public ListEnumerator(Vector<T> vector)
+            public IteratorClass(Vector<T> vector)
             {
                 _vector = vector;
                 _currentIndex = -1;

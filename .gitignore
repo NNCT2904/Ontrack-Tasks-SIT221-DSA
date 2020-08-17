@@ -131,4 +131,5 @@ $RECYCLE.BIN/
 .DS_Store
 
 _NCrunch*
-Task3.1/Task3.1/.vs/Task3.1/xs/UserPrefs.xml
+.vs/
+.vscode/

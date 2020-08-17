@@ -132,50 +132,62 @@ namespace DoublyLinkedList
 
         public INode<T> Before(INode<T> node)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (node == null) throw new NullReferenceException();
+            Node<T> node_current = node as Node<T>;
+            if (node_current.Previous == null || node_current.Next == null) throw new InvalidOperationException("The node referred as 'before' is no longer in the list");
+            if (node_current.Previous.Equals(Head)) return null;
+            else return node_current.Previous;
         }
 
         public INode<T> AddFirst(T value)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            //Add node after the head
+            return AddBetween(value, Head, Head.Next);
         }
 
         public INode<T> AddBefore(INode<T> before, T value)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (before == null) throw new ArgumentNullException();
+            Node<T> node_current = before as Node<T>;
+            return AddBetween(value, node_current.Previous, node_current);
         }
 
         public INode<T> AddAfter(INode<T> after, T value)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (after == null) throw new ArgumentNullException();
+            Node<T> node_current = after as Node<T>;
+            return AddBetween(value, node_current, node_current.Next);
         }
 
         public void Clear()
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            //Make the node empty by connect head to tail, reset count to 0
+            Head.Next = Tail;
+            Tail.Previous = Head;
+            Count = 0;
         }
 
         public void Remove(INode<T> node)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            if (Count == 0) throw new InvalidOperationException();
+            else if (node == null) throw new ArgumentNullException();
+            else if (Find(node.Value) == null) throw new InvalidOperationException();
+
+            //Remove nodes
+            Node<T> node_current = node as Node<T>;
+            node_current.Next.Previous = node_current.Previous;
+            node_current.Previous.Next = node_current.Next;
+            Count--;
         }
 
         public void RemoveFirst()
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            Remove(First);
         }
 
         public void RemoveLast()
-        {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+        {        
+            Remove(Last);
         }
 
     }

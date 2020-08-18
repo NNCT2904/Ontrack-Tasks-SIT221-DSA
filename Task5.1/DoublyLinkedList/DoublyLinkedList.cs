@@ -169,14 +169,17 @@ namespace DoublyLinkedList
 
         public void Remove(INode<T> node)
         {
+            Node<T> node_current = node as Node<T>;
             if (Count == 0) throw new InvalidOperationException();
             else if (node == null) throw new ArgumentNullException();
-            else if (Find(node.Value) == null) throw new InvalidOperationException();
+            else if (node_current.Next == null && node_current.Previous == null) throw new InvalidOperationException();
 
             //Remove nodes
-            Node<T> node_current = node as Node<T>;
+            
             node_current.Next.Previous = node_current.Previous;
             node_current.Previous.Next = node_current.Next;
+            node_current.Next = null;
+            node_current.Previous = null;
             Count--;
         }
 

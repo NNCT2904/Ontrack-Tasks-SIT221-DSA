@@ -161,21 +161,54 @@ namespace DoublyLinkedList
 
         public void Clear()
         {
-            //Make the node empty by connect head to tail, reset count to 0
+            //Make the node empty by remove all connections between nodes
+            Node<T> node = Head;
+            while (node != Tail)
+            {
+                node = node.Next;
+                ResetNode(node.Previous);
+            }
+
             Head.Next = Tail;
             Tail.Previous = Head;
             Count = 0;
         }
 
+        private void ResetNode(INode<T> node)
+        {
+            Node<T> current = node as Node<T>;
+            current.Next = null;
+            current.Previous = null;
+            current.Value = (T)default;
+        }
+
         public void Remove(INode<T> node)
         {
+            //if there is only one linked list in the program, QuickRemove can be used
+            if (Count == 0) throw new InvalidOperationException();
+            else if (node == null) throw new ArgumentNullException();
+            else if (Find(node.Value) == null) throw new InvalidOperationException();
+
+            //Remove nodes
+
+            Node<T> node_current = node as Node<T>;
+            node_current.Next.Previous = node_current.Previous;
+            node_current.Previous.Next = node_current.Next;
+            node_current.Next = null;
+            node_current.Previous = null;
+            Count--;
+        }
+
+        public void QuickRemove(INode<T> node)
+        {
+            //Thanks P.S. for advising this O(1) method!
             Node<T> node_current = node as Node<T>;
             if (Count == 0) throw new InvalidOperationException();
             else if (node == null) throw new ArgumentNullException();
             else if (node_current.Next == null && node_current.Previous == null) throw new InvalidOperationException();
 
             //Remove nodes
-            
+
             node_current.Next.Previous = node_current.Previous;
             node_current.Previous.Next = node_current.Next;
             node_current.Next = null;

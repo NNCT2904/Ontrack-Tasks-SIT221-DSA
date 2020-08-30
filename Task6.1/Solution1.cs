@@ -109,7 +109,7 @@ namespace solution
             }
         }
 
-        public int Pop()
+        public T Pop()
         {
             if (_stack.IsEmpty)
             {

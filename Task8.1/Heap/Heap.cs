@@ -164,29 +164,77 @@ namespace Heap
         {
             if (Count > 0) throw new InvalidOperationException();
             
+            // Add nodes to list
             for (int i = 0; i< keys.Length; i++)
             {
-                Insert(keys[i], data[i]);
+                Count++;
+                Node node = new Node(keys[i], data[i], Count);
+                this.data.Add(node);
             }
+
+            // Create new array, copy nodes from list to array
             Node[] nodes = new Node[Count];
             nodes = this.data.Skip(1).ToArray();
+
+            // DownHeap on the last parent to the root
+            for (int i = Count/2; i> 0; i--)
+            {
+                DownHeap(i);
+            }
+
+            // Return the array, not the list
             return nodes;
         }
 
         public void DecreaseKey(IHeapifyable<K, D> element, K new_key)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            Node selected_node = element as Node;           
+            if (selected_node != data[selected_node.Position]) throw new InvalidOperationException();
+            selected_node.Key = new_key;
+            UpHeap(selected_node.Position);
         }
+
         public IHeapifyable<K, D> DeleteElement(IHeapifyable<K, D> element)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            Node selected_node = element as Node;
+
+            // Swap the node's position with the last position,O(1)
+            Swap(selected_node.Position, Count);
+
+            // Remove the last element and decrease Count by 1, O(1)
+            data.RemoveAt(Count);
+            Count--;
+
+            // UpHeap() to maintain the Heap
+            UpHeap(selected_node.Position);
+            
+            return selected_node;
         }
+
         public IHeapifyable<K, D> KthMinElement(int k)
         {
-            // You should replace this plug by your code.
-            throw new NotImplementedException();
+            // Save a copy of the original sequence to a temporary sequence (!= refer)
+            List<Node> tempData = new List<Node>();
+            Node result = data[0];
+
+            foreach (var item in data)
+            {
+                tempData.Add(item);
+            }
+            
+            // Worst case scenario: Finding the Kth Min element in N element, is short: n = k
+            // Worst Time Complexity: k(iterations) * (log(n)(Delete costs log(n)) +1(k decreament))= k*log(n) + k
+            // O(klogk)
+            while (k>0)
+            {
+                result = Delete() as Node;
+                k--;
+            }
+
+            // Load the copy, as the original sequence has been modified
+            this.data = tempData;
+            this.Count = this.data.Count-1;
+            return result;
         }
 
     }

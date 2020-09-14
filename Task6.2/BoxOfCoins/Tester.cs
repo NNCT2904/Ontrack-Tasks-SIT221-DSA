@@ -7,6 +7,9 @@ namespace BoxOfCoins
     {
         static void Main(string[] args)
         {
+            DateTime begin, end;
+            TimeSpan runtime;
+            begin = DateTime.Now;
             List<int> correct = new List<int>(TestGenerator.Count());
             List<int> incorrect = new List<int>(TestGenerator.Count());
             int scores = 0;
@@ -33,11 +36,12 @@ namespace BoxOfCoins
                     Console.WriteLine(" :: FAILED with the runtime error {1}", i, e.ToString());
                 }
             }
-
+            end = DateTime.Now;
+            runtime = end - begin;
             Console.WriteLine("\nSummary: {0} tests out of {1} passed", scores, TestGenerator.Count());
             Console.WriteLine("Tests passed ({1} to {2}): {0}", correct.Count == 0 ? "none" : string.Join(", ", correct), 0, TestGenerator.Count());
             Console.WriteLine("Tests failed ({1} to {2}): {0}", incorrect.Count == 0 ? "none" : string.Join(", ", incorrect), 0, TestGenerator.Count());
-
+            System.Console.WriteLine($"Begins at {begin}\nEnds at {end} \nTook {runtime}");
             Console.ReadKey();
         }
 

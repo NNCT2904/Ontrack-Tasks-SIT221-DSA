@@ -8,12 +8,12 @@ namespace BoxOfCoins
 {
     public class BoxOfCoins
     {
-
+        List<string> m = new List<string>();
         public static int Solve(int[] boxes)
         {
             int sum = Sum(boxes);
 
-            int alexValue = AlexMaxCoins(boxes);
+            int alexValue = AlexMaxCoins(boxes, 0, boxes.Length-1);
             int cindyValue = sum - alexValue;
 
             return alexValue - cindyValue;
@@ -29,7 +29,8 @@ namespace BoxOfCoins
             return sum;
         }
 
-        // The recursion way, wayyyyyyy more expensive, it will check the result in every single way
+        // The recursion way, wayyyyyyy more expensive, 
+        // it will check the result in every single way
         private static int AlexMaxCoins(int[] boxes, int start, int end)
         {
             if (start > end) return 0;
@@ -43,7 +44,6 @@ namespace BoxOfCoins
         private static int AlexMaxCoins(int[] boxes)
         {
             // Time and complexity: O(n^2)
-            // 
             int n = boxes.Length;
             int[,] table = new int[n, n];
 
@@ -54,11 +54,64 @@ namespace BoxOfCoins
                 {
                     x = ((i + 2) <= j) ? table[i + 2, j] : 0;
                     y = ((i + 1) <= (j - 1)) ? table[i + 1, j - 1] : 0;
-                    z = (i<= (j-2))?table[i,j-2]:0;
-                    table[i,j] = Math.Max(boxes[i] + Math.Min(x, y), boxes[j] + Math.Min(y,z));
+                    z = (i <= (j - 2)) ? table[i, j - 2] : 0;
+                    table[i, j] = Math.Max(boxes[i] + Math.Min(x, y), boxes[j] + Math.Min(y, z));
                 }
             }
-            return table[0, n-1];
+            PrintTable(table);
+            return table[0, n - 1];
+        }
+        /* 
+        The original array:
+
+        int[] boxes 
+           |x x x x x x|
+            0 1 2 3 4 5
+            i-->
+
+        Fill the table like this (upper triangular matrix):
+        int[,] table
+            j-->
+            0 1 2 3 4 5
+            ___________
+        i 0|x x x x x x
+        | 1|0 x x x x x
+        v 2|0 0 x x x x
+          3|0 0 0 x x x
+          4|0 0 0 0 x x
+          5|0 0 0 0 0 x
+
+        table[i,j] is the maximum value that users can get, from ith to jth index
+        ex: table[1,3]
+            j-->
+            0 1 2 3 4 5
+            ___________
+        i 0|x x x x x x
+        | 1|0 x x(*)x x
+        v 2|0 0 x x x x
+          3|0 0 0 x x x
+          4|0 0 0 0 x x
+          5|0 0 0 0 0 x
+
+        The marked position is represent of the maximum value can get from 2 indexes:
+           |x x x x x x|
+            0 1 2 3 4 5
+              i   j
+        
+        for each choices from user, the opponent 
+        */
+
+        private static void PrintTable(int[,] table)
+        {
+            int n = table.GetLength(0) - 1;
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    Console.Write("{0,7}", table[i, j]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 

@@ -8,12 +8,11 @@ namespace BoxOfCoins
 {
     public class BoxOfCoins
     {
-        List<string> m = new List<string>();
         public static int Solve(int[] boxes)
         {
             int sum = Sum(boxes);
 
-            int alexValue = AlexMaxCoins(boxes, 0, boxes.Length-1);
+            int alexValue = AlexMaxCoins(boxes);
             int cindyValue = sum - alexValue;
 
             return alexValue - cindyValue;

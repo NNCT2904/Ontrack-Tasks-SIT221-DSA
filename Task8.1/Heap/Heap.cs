@@ -222,7 +222,7 @@ namespace Heap
                 tempData.Add(item);
             }
             
-            // Worst case scenario: Finding the Kth Min element in N element, is short: n = k
+            // Worst case scenario: Finding the Kth Min element in N element, where n = k
             // Worst Time Complexity: k(iterations) * (log(n)(Delete costs log(n)) +1(k decreament))= k*log(n) + k
             // O(klogk)
             while (k>0)
